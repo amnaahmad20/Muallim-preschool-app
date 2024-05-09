@@ -11,6 +11,7 @@ import 'screens/shape.dart';
 import 'screens/flower.dart';
 import 'screens/animal.dart';
 import 'screens/birds.dart';
+
 void main() {
   runApp(ColorLearningApp());
 }
@@ -24,9 +25,12 @@ class ColorLearningApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/',
+      home: SplashScreen(),
+      // Enable performance overlay for debugging
+      debugShowCheckedModeBanner: false,
+      debugShowMaterialGrid: false,
+      showPerformanceOverlay: true, // This line enables the Performance Overlay
       routes: {
-        '/': (context) => SplashScreen(),
         '/login': (context) => LoginScreen(),
         '/main': (context) => MainPage(),
         '/settings': (context) => SettingsPage(),
@@ -38,11 +42,6 @@ class ColorLearningApp extends StatelessWidget {
         '/flower': (context) => Flower(),
         '/animal': (context) => Animal(),
         '/bird': (context) => Bird(),
-
-
-
-
-
       },
     );
   }
